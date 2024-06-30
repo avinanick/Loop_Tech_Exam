@@ -1,0 +1,11 @@
+{
+  "name": "loop_tech_exam",
+  "version": "1.0.0",
+  "description": "Tech exam for Loop application",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Nicholas Avina",
+  "license": "ISC"
+}
