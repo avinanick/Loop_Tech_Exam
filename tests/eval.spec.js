@@ -47,17 +47,24 @@ const testCases = [
 
 test.describe('Asana Data-Driven Tests', () => {
   testCases.forEach((data) => {
-    test('', async ({ page }) => {
+    test(`${data.name}`, async ({ page }) => {
       await test.step('Login to Asana', async () => {
         // Login to Asana
+        await page.goto('https://app.asana.com/-/login');
+        await page.locator('.TextInput').fill('ben+pose@workwithloop.com');
+        await page.locator('.LoginButton').click();
+        await page.locator('[type="password"]').fill('Password123');
+        await page.locator('.LoginButton').click();
       });
 
       await test.step('Navigate to the project page', async () => {
         // Navigate to the project page
+        
       });
 
       await test.step('Verify the card is within the right column', async () => {
         // Verify the card is within the right column
+        
       });
       
     });
