@@ -64,7 +64,8 @@ test.describe('Asana Data-Driven Tests', () => {
 
       await test.step('Verify the card is within the right column', async () => {
         // Verify the card is within the right column
-        
+        await expect(page.locator('.BoardBody-columnDraggableItemWrapper:has-text("' + data.column +'")')
+            .locator('.SortableList-sortableItemContainer:has-text("' + data.card_title +'")')).toBeVisible();
       });
       
     });
