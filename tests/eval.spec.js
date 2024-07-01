@@ -59,7 +59,7 @@ test.describe('Asana Data-Driven Tests', () => {
 
       await test.step('Navigate to the project page', async () => {
         // Navigate to the project page
-        
+        await page.locator('.SidebarProjectsSectionProjectList-projects :text("' + data.leftNav + '")').click();
       });
 
       await test.step('Verify the card is within the right column', async () => {
